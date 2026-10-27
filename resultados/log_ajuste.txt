@@ -1,0 +1,40 @@
+﻿[alpha] 200 entrenamientos...
+[alpha] terminado en 12.1 min
+   browniano  qlearning -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   browniano  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   ciclico    qlearning -> α=0.005 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   ciclico    sarsa     -> α=0.005 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   regimenes  qlearning -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   regimenes  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   reversion  qlearning -> α=0.002 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   reversion  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+[gamma] 120 entrenamientos...
+[gamma] terminado en 6.7 min
+   browniano  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   browniano  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   ciclico    qlearning -> α=0.005 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   ciclico    sarsa     -> α=0.005 decay=1.0 γ=0.9 ε=1.0→0.01 f=0.6
+   regimenes  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   regimenes  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   reversion  qlearning -> α=0.002 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   reversion  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+[epsilon] 120 entrenamientos...
+[epsilon] terminado en 7.1 min
+   browniano  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   browniano  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   ciclico    qlearning -> α=0.005 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   ciclico    sarsa     -> α=0.005 decay=1.0 γ=0.9 ε=1.0→0.01 f=0.6
+   regimenes  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   regimenes  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   reversion  qlearning -> α=0.002 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   reversion  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=0.1→0.1 f=0.6
+[discretizacion] 160 entrenamientos...
+[discretizacion] terminado en 14.8 min
+   browniano  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   browniano  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   ciclico    qlearning -> α=0.005 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   ciclico    sarsa     -> α=0.005 decay=1.0 γ=0.9 ε=1.0→0.01 f=0.6
+   regimenes  qlearning -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.6
+   regimenes  sarsa     -> α=0.001 decay=1.0 γ=0.99 ε=1.0→0.01 f=0.3
+   reversion  qlearning -> α=0.002 decay=1.0 γ=0.95 ε=1.0→0.01 f=0.6
+   reversion  sarsa     -> α=0.001 decay=1.0 γ=0.95 ε=0.1→0.1 f=0.6
