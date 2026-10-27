@@ -160,23 +160,36 @@ def ejecutar_baselines():
     print("[baselines] terminado", flush=True)
 
 
+def retornos_futuros(p, cortes, k=10):
+    """Para cada paso de una serie: (bin de tendencia observado, log-retorno de los k pasos siguientes)."""
+    n = len(p) - 5 - k                                   # pasos con k precios futuros
+    bins = np.digitize(calcular_tendencias(p)[:n], cortes)
+    return bins, np.log(p[5 + k: 5 + k + n] / p[5: 5 + n])
+
+
+def media_por_bin(lista_series, cortes, k=10):
+    """Log-retorno medio de los k pasos siguientes por bin, con su error estándar.
+
+    El e.s. es optimista: los retornos de k pasos se solapan y están correlacionados.
+    """
+    por_bin = [[] for _ in range(len(cortes) + 1)]
+    for p in lista_series:
+        bins, futuro = retornos_futuros(p, cortes, k)
+        for b in range(len(por_bin)):
+            por_bin[b].extend(futuro[bins == b])
+    media = np.array([np.mean(x) for x in por_bin])
+    se = np.array([np.std(x) / np.sqrt(len(x)) for x in por_bin])
+    return media, se
+
+
 def senal_por_bin(gen, n_bins=10, k=10, n_series=400, seed=55):
     """Log-retorno medio de los k pasos siguientes, condicionado al bin de tendencia (H3).
 
     Es la "verdad de referencia": indica qué política es explotable con este estado.
     Devuelve (media, error estándar) por bin.
     """
-    disc = Discretizador(gen, n_bins)
-    por_bin = [[] for _ in range(n_bins)]
-    for p in generar_series(gen, n_series, BASE.n_steps, seed):
-        n = len(p) - 5 - k                               # pasos con k precios futuros
-        bins = np.digitize(calcular_tendencias(p)[:n], disc.cortes)
-        futuro = np.log(p[5 + k: 5 + k + n] / p[5: 5 + n])
-        for b in range(n_bins):
-            por_bin[b].extend(futuro[bins == b])
-    media = np.array([np.mean(x) for x in por_bin])
-    se = np.array([np.std(x) / np.sqrt(len(x)) for x in por_bin])
-    return media, se
+    cortes = Discretizador(gen, n_bins).cortes
+    return media_por_bin(generar_series(gen, n_series, BASE.n_steps, seed), cortes, k)
 
 
 def ejecutar_senal():

@@ -130,3 +130,50 @@ Un representante del grupo debe enviar un e-mail al profesor **antes del martes 
 - 27/10/2026 — Primera pasada completa y análisis de la señal (H3, H4, H5).
 - 27/10/2026 — Creados `experimentos.py` (ajuste α → γ → ε, baselines y señal; ≈ 24 min con 32 núcleos) y `graficas.py` (8 figuras y tabla en `figuras/`). Resultados H6–H9.
 - 27/10/2026 — Ampliado el grid de α con 0.001 y repetida la cadena α → γ → ε (≈ 26 min). Experimento de discretización (≈ 15 min). Nueva figura `fig_discretizacion.png`. Resultados H10 y H11.
+
+## 4. Datos reales: BTC-USD (rama `datos-reales-btc`)
+
+**Objetivo:** comprobar si los métodos que funcionan en mercados sintéticos funcionan en un activo real. Script: `datos_reales.py`.
+
+| # | Decisión | Motivo |
+|---|----------|--------|
+| B1 | Velas **diarias** de BTC-USD (yfinance), congeladas en `datos/btc_usd.csv` (4423 días, 2014-09-17 a 2026-10-26) | Reproducibilidad: yfinance puede limitar peticiones o revisar datos antiguos. Las velas horarias sólo cubren 730 días |
+| B2 | División **cronológica**: entrenamiento 2014-09 → 2020 (2298 días), validación 2021–2022 (730), test 2023 → 2026-10 (1395) | Barajar fechas filtraría información del futuro. Validación incluye un mercado alcista (2021) y uno bajista (2022) |
+| B3 | Cada episodio = **ventana aleatoria de 500 días** del periodo de entrenamiento, empaquetada como "generador" con la misma firma que los sintéticos | Cumple "una serie distinta en cada episodio" con una sola serie real, y reutiliza `entrenar()` y `Discretizador` sin cambios. Los cuantiles salen **sólo** de entrenamiento |
+| B4 | Validación y test = **backtest continuo** del periodo, con los 5 días previos antepuestos | Es la evaluación estándar en finanzas; los 5 días permiten decidir desde el primer día del periodo |
+| B5 | Grid α ∈ {0.001, 0.002, 0.005, 0.01} × γ ∈ {0.9, 0.95, 0.99}; ε con decaimiento (f = 0.6); 10 bins por cuantiles; 5000 episodios; 5 semillas; selección en validación | Mismo protocolo que en los sintéticos (D13), con grid conjunto α × γ porque es barato |
+| B6 | Métricas: rentabilidad total, CAGR, volatilidad anual, Sharpe (rf = 0), máximo drawdown, operaciones, % del tiempo invertido. Anualización con **365 días** | Métricas estándar de backtest; cripto cotiza todos los días |
+| B7 | `fig_backtest`: semilla **mediana en validación** | Igual que D14: no se elige con test |
+
+**Limitaciones conocidas** (para el análisis crítico):
+- El entorno ejecuta al cierre del día *t* con una señal que ya incluye ese cierre. En la realidad se operaría a la apertura de *t+1*, así que el backtest es ligeramente optimista.
+- Las ventanas de entrenamiento se solapan mucho: el agente ve los mismos 2300 días repetidamente, con riesgo de sobreajuste.
+- **No estacionariedad**: BTC en 2014–2020 tenía otra volatilidad y otra estructura de mercado que en 2023–2026.
+- Comisión del 0.1 %: realista para spot en un exchange grande, pero sin *slippage*.
+
+### Resultados BTC (`figuras/btc_*.png`, `figuras/btc_tabla.md`)
+
+Configuración elegida en validación: Q-Learning α = 0.005, γ = 0.9; SARSA α = 0.01, γ = 0.95.
+
+| Test 2023 → 2026-10 | Rent. total | Sharpe | Máx. DD | Volatilidad | Operaciones | Tiempo invertido |
+|---|---|---|---|---|---|---|
+| Buy & Hold | **+381 %** | **1.12** | 53 % | 46 % | 1 | 100 % |
+| Aleatorio | +57 ± 61 % | 0.45 | 46 % | 33 % | 464 | 50 % |
+| Q-Learning | +82 ± 27 % | 0.69 | **40 %** | **27 %** | 288 | 33 % |
+| SARSA | +42 ± 40 % | 0.42 | 41 % | 26 % | 290 | 29 % |
+
+Validación 2021–2022, con el mercado bajista de 2022: Buy & Hold −44 % (DD 77 %), Q-Learning y SARSA −11 % (DD 47–51 %).
+
+- **BH1 — En test no supera a Buy & Hold**, ni en rentabilidad ni en Sharpe. Su menor volatilidad y drawdown se deben a estar **fuera del mercado el 67 % del tiempo**, no a acertar el momento: Buy & Hold tiene mejor Sharpe (1.12 frente a 0.69), así que cada unidad de riesgo que asume el agente rinde menos.
+- **BH2 — Sí protege en mercado bajista:** en 2022 pierde 11 % frente a 44 %. Es el mismo comportamiento que en el generador de regímenes (H11): el valor está en evitar pérdidas.
+- **BH3 — La política es coherente con la señal de entrenamiento:** momentum. Compra en los bins 6, 8 y 9 y vende en los 0–3 y 5. Pero la señal **no es estable**: en 2014–2020 los bins 6–8 daban +2–3 % a 10 días; en 2023–2026 dan ≈ 0. Sólo el bin 9 (subida fuerte) mantiene la señal. Además, **todos los bins tienen retorno medio positivo** (deriva alcista), así que estar fuera tiene un coste de oportunidad, y las barras de ±2 e.s. se solapan casi todas. No hay una ventaja de *timing* estadísticamente clara.
+- **BH4 — Las comisiones pesan mucho:** 288 operaciones al 0.1 % suponen 0.999²⁸⁸ ≈ 0.75, es decir, ≈ 25 % del capital. La tendencia de 6 días cambia de bin muy a menudo y el agente entra y sale demasiado.
+- **BH5 — Gran sensibilidad a los hiperparámetros** (`btc_ajuste.png`): en validación, γ = 0.99 o α = 0.001 dan entre −68 % y −94 %, frente a −12 % del mejor. Además, la validación es un único camino de 730 días, así que la selección es ruidosa. Q-Learning y SARSA difieren mucho en test (+82 % frente a +42 %) con configuraciones que en validación empataban (−12 %).
+
+**Conclusión:** el método funciona como algoritmo (aprende una política coherente con los datos de entrenamiento y reduce el riesgo), pero con este estado (una sola variable de tendencia de 6 días) **no encuentra una ventaja explotable en BTC** después de comisiones. Coincide con lo esperado para un activo casi eficiente: es el caso "browniano con deriva", no el de "reversión a la media".
+
+**Mejoras posibles** (no implementadas):
+- Variable de tendencia larga (precio frente a media de 50/200 días).
+- Penalizar el cambio de posición o añadir histéresis para reducir operaciones.
+- Velas semanales.
+- Reentrenamiento *walk-forward* para adaptarse a la no estacionariedad.
