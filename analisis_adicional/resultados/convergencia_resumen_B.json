@@ -1,0 +1,39 @@
+{
+ "n_pares_validos": 33,
+ "ql_antes": 4,
+ "sarsa_antes": 19,
+ "empate": 10,
+ "p_menor_005_sin_ajustar": 3,
+ "minimo_p_posible_con_5_vs_5": 0.007936507936507936,
+ "por_generador": {
+  "ciclico": {
+   "n": 7,
+   "ql_antes": 0,
+   "sarsa_antes": 4,
+   "empate": 3,
+   "p_menor_005": 0
+  },
+  "browniano": {
+   "n": 12,
+   "ql_antes": 2,
+   "sarsa_antes": 6,
+   "empate": 4,
+   "p_menor_005": 1
+  },
+  "reversion": {
+   "n": 5,
+   "ql_antes": 2,
+   "sarsa_antes": 2,
+   "empate": 1,
+   "p_menor_005": 1
+  },
+  "regimenes": {
+   "n": 9,
+   "ql_antes": 0,
+   "sarsa_antes": 7,
+   "empate": 2,
+   "p_menor_005": 1
+  }
+ },
+ "nota": "los pares comparten generador y semillas y no son independientes: los recuentos son descriptivos"
+}

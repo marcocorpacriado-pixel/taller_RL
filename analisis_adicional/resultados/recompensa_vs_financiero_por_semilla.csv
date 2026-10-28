@@ -1,0 +1,41 @@
+generador,algoritmo,semilla,operaciones,recompensa_pp,logret_pp,ret_simple_pp,comportamiento
+ciclico,qlearning,0,62.99,779.774,605.26,148629,opera
+ciclico,qlearning,1,55.89,785.912,618.128,167024,opera
+ciclico,qlearning,2,55.89,785.912,618.128,167024,opera
+ciclico,qlearning,3,66.71,786.231,605.136,152929,opera
+ciclico,qlearning,4,66.71,786.231,605.136,152929,opera
+ciclico,sarsa,0,45.45,794.716,602.794,149879,opera
+ciclico,sarsa,1,66.71,786.231,605.136,152929,opera
+ciclico,sarsa,2,55.89,785.912,618.128,167024,opera
+ciclico,sarsa,3,41.69,799.081,613.217,153843,opera
+ciclico,sarsa,4,55.89,785.912,618.128,167024,opera
+browniano,qlearning,0,1,3.79778,-5.87814,3.42821,compra y mantiene (≈B&H)
+browniano,qlearning,1,0,0,0,0,efectivo
+browniano,qlearning,2,0,0,0,0,efectivo
+browniano,qlearning,3,1,3.56765,-6.04481,3.19626,compra y mantiene (≈B&H)
+browniano,qlearning,4,0,0,0,0,efectivo
+browniano,sarsa,0,0,0,0,0,efectivo
+browniano,sarsa,1,0,0,0,0,efectivo
+browniano,sarsa,2,0,0,0,0,efectivo
+browniano,sarsa,3,1,4.69173,-4.69316,4.77877,compra y mantiene (≈B&H)
+browniano,sarsa,4,0,0,0,0,efectivo
+reversion,qlearning,0,47.48,26.887,21.6763,26.3494,opera
+reversion,qlearning,1,55.38,26.0063,21.6097,26.1365,opera
+reversion,qlearning,2,47.48,26.887,21.6763,26.3494,opera
+reversion,qlearning,3,55.38,26.0063,21.6097,26.1365,opera
+reversion,qlearning,4,55.38,26.0063,21.6097,26.1365,opera
+reversion,sarsa,0,47.48,26.887,21.6763,26.3494,opera
+reversion,sarsa,1,47.48,26.887,21.6763,26.3494,opera
+reversion,sarsa,2,47.48,26.887,21.6763,26.3494,opera
+reversion,sarsa,3,34.67,26.984,20.397,25.0576,opera
+reversion,sarsa,4,47.48,26.887,21.6763,26.3494,opera
+regimenes,qlearning,0,22.04,1.66927,-2.44107,2.30362,opera
+regimenes,qlearning,1,34.21,6.02385,3.55911,5.34211,opera
+regimenes,qlearning,2,43.55,5.21832,3.3227,5.70129,opera
+regimenes,qlearning,3,43.55,5.21832,3.3227,5.70129,opera
+regimenes,qlearning,4,22.11,0.408128,-3.59354,-0.170911,opera
+regimenes,sarsa,0,34.21,6.02385,3.55911,5.34211,opera
+regimenes,sarsa,1,34.21,6.02385,3.55911,5.34211,opera
+regimenes,sarsa,2,35.84,5.45173,2.92882,5.73086,opera
+regimenes,sarsa,3,0,0,0,0,efectivo
+regimenes,sarsa,4,37.16,5.39955,2.75418,5.04016,opera

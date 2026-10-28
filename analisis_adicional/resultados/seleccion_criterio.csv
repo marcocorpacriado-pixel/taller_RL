@@ -1,0 +1,25 @@
+etapa,generador,algoritmo,elegida_por_logret,elegida_por_recompensa,elegida_por_ret_simple,coincide_recompensa,coincide_ret_simple,test_logret_pp_elegida_logret,test_logret_pp_elegida_recompensa,dif_val_entre_1ra_y_2da_pp
+alpha,browniano,qlearning,α=0.001,α=0.001,α=0.001,True,True,-1.138,-1.138,0.00977422
+alpha,browniano,sarsa,α=0.001,α=0.001,α=0.001,True,True,0,0,0
+alpha,ciclico,qlearning,α=0.005,α=0.05→0.001,α=0.005,False,True,610.358,606.93,2.73577
+alpha,ciclico,sarsa,α=0.005,α=0.005,α=0.01,True,False,601.106,601.106,0.391216
+alpha,regimenes,qlearning,α=0.001,α=0.001,α=0.001,True,True,2.87446,2.87446,3.40303
+alpha,regimenes,sarsa,α=0.001,α=0.001,α=0.001,True,True,1.21537,1.21537,0.345058
+alpha,reversion,qlearning,α=0.002,α=0.002,α=0.002,True,True,21.6363,21.6363,3.09992
+alpha,reversion,sarsa,α=0.001,α=0.001,α=0.001,True,True,21.3805,21.3805,1.06517
+gamma,browniano,qlearning,γ=0.99,γ=0.99,γ=0.99,True,True,-3.54299,-3.54299,0.16621
+gamma,browniano,sarsa,γ=0.99,γ=0.99,γ=0.99,True,True,-0.993756,-0.993756,0.243453
+gamma,ciclico,qlearning,γ=0.95,γ=0.9,γ=0.9,False,False,610.358,605.92,2.05124
+gamma,ciclico,sarsa,γ=0.9,γ=0.9,γ=0.9,True,True,611.481,611.481,5.86505
+gamma,regimenes,qlearning,γ=0.99,γ=0.99,γ=0.99,True,True,0.833979,0.833979,0.489303
+gamma,regimenes,sarsa,γ=0.99,γ=0.99,γ=0.99,True,True,-0.851651,-0.851651,0.920703
+gamma,reversion,qlearning,γ=0.95,γ=0.95,γ=0.95,True,True,21.6363,21.6363,0.41704
+gamma,reversion,sarsa,γ=0.95,γ=0.95,γ=0.95,True,True,21.3805,21.3805,0
+epsilon,browniano,qlearning,ε decay (f=0.3),ε decay (f=0.6),ε decay (f=0.6),False,False,-2.38459,-3.54299,0.0575969
+epsilon,browniano,sarsa,ε decay (f=0.3),ε decay (f=0.3),ε=0.1 constante,True,False,-0.938632,-0.938632,0.16224
+epsilon,ciclico,qlearning,ε decay (f=0.6),ε decay (f=0.3),ε decay (f=0.6),False,True,610.358,600.083,8.0138
+epsilon,ciclico,sarsa,ε decay (f=0.6),ε decay (f=0.6),ε decay (f=0.3),True,False,611.481,611.481,1.68613
+epsilon,regimenes,qlearning,ε decay (f=0.6),ε decay (f=0.6),ε decay (f=0.6),True,True,0.833979,0.833979,3.14874
+epsilon,regimenes,sarsa,ε decay (f=0.3),ε decay (f=0.3),ε decay (f=0.3),True,True,2.56024,2.56024,1.37476
+epsilon,reversion,qlearning,ε decay (f=0.6),ε decay (f=0.6),ε decay (f=0.6),True,True,21.6363,21.6363,1.01856
+epsilon,reversion,sarsa,ε=0.1 constante,ε=0.1 constante,ε=0.1 constante,True,True,21.4205,21.4205,0.773535

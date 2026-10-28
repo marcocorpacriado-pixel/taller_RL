@@ -1,0 +1,4 @@
+comprobacion,n_elementos,max_dif_abs,tolerancia,resultado,detalle
+Determinismo del entrenamiento: misma config+semilla en dos etapas distintas => misma Q y misma curva,120,0,0,OK,
+Último punto de la curva guardada == media de las 10 primeras series de validación guardada (float32),480,2.36043e-07,1e-05,OK,
+Criterio original de convergencia recalculado == columna 'Episodios hasta convergencia' de la tabla original,8,0,0,OK,

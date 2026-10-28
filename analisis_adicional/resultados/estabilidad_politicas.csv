@@ -1,0 +1,9 @@
+generador,algoritmo,politicas_distintas,de,acuerdo_medio_estados,acuerdo_medio_ponderado_visitas,estados_distintos_medio,estados_con_desacuerdo,top_desacuerdo,valores_distintos_logret_test,sd_semillas_logret_pp,min_logret_pp,max_logret_pp,corr_rangos_distancia_vs_dif_rendimiento,empates_exactos_Q_en_acciones_validas
+ciclico,qlearning,3,5,0.95,0.968749,1,2,fuera/bin4:C (0.6) ; fuera/bin5:C (0.8),3,7.09334,605.136,618.128,0.357576,0
+ciclico,sarsa,4,5,0.92,0.948301,1.6,3,fuera/bin4:C (0.4) ; dentro/bin2:V (0.6) ; fuera/bin5:C (0.8),4,7.19536,602.794,618.128,0.430303,0
+browniano,qlearning,5,5,0.63,0.708054,7.4,14,dentro/bin3:V (0.4) ; dentro/bin1:V (0.4) ; dentro/bin0:V (0.4),3,3.26577,-6.04481,0,0.624242,0
+browniano,sarsa,5,5,0.71,0.855462,5.8,11,dentro/bin2:V (0.4) ; dentro/bin3:V (0.4) ; dentro/bin5:V (0.6),2,2.09885,-4.69316,0,0.842424,0
+reversion,qlearning,2,5,0.97,0.98135,0.6,1,dentro/bin7:V (0.6),2,0.0365055,21.6097,21.6763,1,0
+reversion,sarsa,2,5,0.98,0.984109,0.4,1,dentro/bin8:V (0.8),2,0.572138,20.397,21.6763,1,0
+regimenes,qlearning,4,5,0.88,0.918731,2.4,4,fuera/bin6:C (0.6) ; fuera/bin5:C (0.4) ; dentro/bin1:V (0.4),4,3.54057,-3.59354,3.55911,0.224242,0
+regimenes,sarsa,4,5,0.91,0.928714,1.8,4,fuera/bin5:C (0.4) ; fuera/bin3:C (0.2) ; fuera/bin6:C (0.2),4,1.4768,0,3.55911,0.2,0

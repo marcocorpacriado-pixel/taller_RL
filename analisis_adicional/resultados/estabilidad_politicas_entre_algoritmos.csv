@@ -1,0 +1,5 @@
+generador,acuerdo_entre_algoritmos,acuerdo_dentro_QL,acuerdo_dentro_SARSA
+ciclico,0.938,0.95,0.92
+browniano,0.712,0.63,0.71
+reversion,0.96,0.97,0.98
+regimenes,0.896,0.88,0.91
