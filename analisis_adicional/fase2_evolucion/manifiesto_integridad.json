@@ -1,0 +1,388 @@
+{
+ "descripcion": "Manifiesto de integridad de la Fase 4. Complementa manifiesto_huellas_inicio.json (Fase 2). Ver manifiesto.py.",
+ "creado": "2026-10-28",
+ "rama_al_crear": "feature/analisis-estadistico-rl",
+ "head_al_crear": "5a6e1ee004f11c20f2ad0fd617f0b93f5415df37",
+ "originales_lf": {
+  "trader_rl.py": "ea043574a7ec1e6a950773f236b7126315caa0f6747abc1c72aa7152982043ad",
+  "experimentos.py": "37b659adf022176c14277071bb8c9a39488a1945858fcb06e9f23ec7574ce1b1",
+  "graficas.py": "f566a6e4a92e262309d1e250971c15e371e9f745adba14acd01228ca31fe3a96",
+  "BITACORA.md": "be0e41a7035f46619ea7b57e5c82a80aa9ef87cc8664aa57494101707b02ecf5",
+  "taller_trader.ipynb": "3749552805c7a3c52afbf7e18899585110b6f9213f09c1f9e2330950a1c94a52",
+  "resultados/alpha.pkl": "7cc46205a4c76ac9432a8cc650b1eb367d90aab29c850f2ee85b01d9962708ab",
+  "resultados/baselines.pkl": "202bbe59f7d6e44545569282f37734cd00d975da2941e729c6fc1b4569de0b69",
+  "resultados/discretizacion.pkl": "01f2d1380fe5224816053b83c8f2cf66763163aa657ea28f41cc7d352518a0e2",
+  "resultados/epsilon.pkl": "bfddaa17857b80ab4628f008b2aec966d70b4bc3555fc35eaf89c71c518fa64a",
+  "resultados/gamma.pkl": "3d6569edb27d465164a8143560fe82a03b90f890a4991b0e477c04b57d57841d",
+  "resultados/log_ajuste.txt": "b8758dec6c4acad0e8832497c45b96bfbcbaa96e1d5b62e17e669b460cfc23f6",
+  "resultados/senal.pkl": "63a6a49f4e88e75711b3318b6dbcb79ff3a362890605aed3b2eea1b452f1e5ec",
+  "figuras/fig_ajuste.png": "8f83c6c9918af9dfeff46abaa85afc6476f652fc84b7d275f7f4549116c6d0f2",
+  "figuras/fig_convergencia.png": "9c8db734354a14018029d162ac6e0ca8bce96c1e518ce181ed2f4678c87900ff",
+  "figuras/fig_convergencia_eps.png": "5d0d71cc7ad03e696b26a3361ed49cf805439a41ea82a55c36528697f9f9873e",
+  "figuras/fig_discretizacion.png": "19813734a2b40e9f6a1c65fbab9f3d7ae1345bf06d06e4e49dc9f4ba9ee09d32",
+  "figuras/fig_generadores.png": "eac33a049b4a51ee9b349702f5ac4f899c91941f995e85201ecbbd316abe84c4",
+  "figuras/fig_pnl_entrenamiento.png": "974337d300f3a5ab45c8f5267e37a35879f0f8d467adfbd3d3d8763b52a974e7",
+  "figuras/fig_senal_politica.png": "35c1891dd9b4c55eeb95ce5eb003db4375fed9391c6588e87310b082eaecb1a3",
+  "figuras/fig_senales.png": "5636ab00479da982f97cfeab1393a7c30dac1b144aeb514674493dab7c8b6e7a",
+  "figuras/fig_test.png": "65c2dda27cba40638c647dd9f54bc5a7984bcae9bed61ecb0d2b855eef4bad9c",
+  "figuras/tabla_resultados.md": "099a271dfe004a655065158bb0a71034fec1fca04d9969ba06f44b2b4c88c8d0",
+  "analisis_adicional/analizar_convergencia.py": "5f9126ca4f6251251a93585e0cf015e1b4e377a44f0e2e5f48505de0305cfa8c",
+  "analisis_adicional/analizar_politicas.py": "f8c99739d1a44b03fdad6b7b147aac592b3816b215198f83066b61a94386ccad",
+  "analisis_adicional/comun.py": "dc6a900dfd8f956231a02a11baadea7d885b287e7f5d29ba571c2ad9f04ae520",
+  "analisis_adicional/figuras/fig1_rendimientos_ic.png": "17ebdaaf0f13302c3f064366d2be8c3c8bcdf18d0c8e60727799c2251b52cc3e",
+  "analisis_adicional/figuras/fig2_qlearning_vs_sarsa.png": "660c28dfb9f48444d141f560d35c184ad7bff39ae59a0494bcddcc453bc8d0ff",
+  "analisis_adicional/figuras/fig3_vs_efectivo_y_buyhold.png": "c9cde8ac146a88d40b8173f572137c1b4ad723cfdbda782d012c576fae28b2a2",
+  "analisis_adicional/figuras/fig4_convergencia_sensibilidad.png": "5bcbe08cf777e7ddfd3f616f86df7b52e7f89101862ee1bd06a8de79013b3ed0",
+  "analisis_adicional/figuras/fig4b_convergencia_hiperparametros_identicos.png": "d1eea4de007253f9e7449604889bafe617758be8c20738fbdfd04ace09be6e1e",
+  "analisis_adicional/figuras/fig5_recompensa_vs_rendimiento.png": "1c63fa3df332319294486af3870da332266c07c5031ba1f0074b0f3650970efc",
+  "analisis_adicional/figuras/fig6_politicas_por_semilla.png": "100aee0ef8655a8fca6da6bb48a6e23c8d8d5d29d2c3807957186db2e4d41daa",
+  "analisis_adicional/INFORME_FASE1.md": "713fc41cac8a89fb7c1f3bceb14e481d2a0704989c1d7e26e5d8e5a8a364f87e",
+  "analisis_adicional/reanalisar_resultados.py": "e70086e9bcc652fd4d629e79a489a70c335c4d15905a76fb92d2b05add264721",
+  "analisis_adicional/resultados/comparaciones_pareadas.csv": "2713caf9bdf1ab2ac73cf92f8ba48154ae4684051a0f87718f617f0521d1731a",
+  "analisis_adicional/resultados/convergencia_comparacion_algoritmos.csv": "a41edebf5169333d1422102774de9863c90c748fce4d5bf3e23f196482c6ccd8",
+  "analisis_adicional/resultados/convergencia_hiperparametros_identicos.csv": "e24e5363756f2c5ec41e940a7cfdcb866d99ff467e43572ff6f8cd93c4002a03",
+  "analisis_adicional/resultados/convergencia_por_corrida.csv": "0d5b8bd83365d8c8668efedfd5887d8f8e3942b0491193c57bee9c97a3d6036a",
+  "analisis_adicional/resultados/convergencia_resumen_B.json": "3079a7cd0dc6f1bd2c611aa0c4c5c9b8d5a7ba024195771fe118a33fde3ded9b",
+  "analisis_adicional/resultados/estabilidad_politicas.csv": "a7c249788c2089b7e8b1d5cc5cfb6af6a527d6c859eb9c64fe14cf900722521a",
+  "analisis_adicional/resultados/estabilidad_politicas_detalle.csv": "9aa6239cf29db44a2d3380791074d4d1d2308981561f96f7b581bdbd3056a8e3",
+  "analisis_adicional/resultados/estabilidad_politicas_entre_algoritmos.csv": "6170cdb8b96074d3333ef0e600f09d4a86696066fb9d1ddb485421953a26a98e",
+  "analisis_adicional/resultados/estabilidad_politicas_estados.csv": "622a1b72e4993fb9a5d397625314d43fde9691a71c661c08c239cd2a3346ab0a",
+  "analisis_adicional/resultados/estabilidad_politicas_pares.csv": "dfa6073274a64e2bed1096c60be1c4d91472e655a39a75b3111e3f5dea3ea806",
+  "analisis_adicional/resultados/metricas_por_agente.csv": "75ab11d53c53e0db2145432503271521027c06ce0119522cc50f1b9514d07dca",
+  "analisis_adicional/resultados/observaciones_test.csv": "7130dc15b3db185d46ab2c47283fe89262a0d528398e5908ffd712cb1a9ba809",
+  "analisis_adicional/resultados/recompensa_vs_financiero.csv": "129d76d0217ce52db9153171918ddfa4cf756eb13fc4929c56a31bccdd724f16",
+  "analisis_adicional/resultados/recompensa_vs_financiero_por_semilla.csv": "2dce680d08179293f2b14f4c8544306e3e12caf9d220196f0e2db26b949b3158",
+  "analisis_adicional/resultados/seleccion_criterio.csv": "a6100108007f7d25b06439252dda4a95e1995a6be1a954585f4805a4950dc5ac",
+  "analisis_adicional/resultados/verificacion_convergencia.csv": "4e1fabc7c4d7641b3b3188681e690fab26ff0afc231e6826f852f94205c380cc",
+  "analisis_adicional/resultados/verificacion_reproduccion.csv": "3fedfbd87d2b5379029817161c6f0c4a2befd5ba20fb866a6b18875481c477ab"
+ },
+ "fase2_artefactos": {
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p002_N1000.npz": {
+   "sha256": "403876eb89710cbb7dca6a8b2720f314ca94eb0682fc0832a41d8ed56c94caf0",
+   "sha256_lf": "403876eb89710cbb7dca6a8b2720f314ca94eb0682fc0832a41d8ed56c94caf0"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p002_N10000.npz": {
+   "sha256": "4232847ad5432b1e696894cf96077309ae7c71bfdaab49b63573bf7222811f85",
+   "sha256_lf": "4232847ad5432b1e696894cf96077309ae7c71bfdaab49b63573bf7222811f85"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p002_N2000.npz": {
+   "sha256": "daa33c4e0ea7fc1d1f9fa145df5bfc559baffb99a858abbc48e8d2883027b51b",
+   "sha256_lf": "daa33c4e0ea7fc1d1f9fa145df5bfc559baffb99a858abbc48e8d2883027b51b"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p002_N500.npz": {
+   "sha256": "34b4c242491b200affb8c497d02be2ace3a5e7c4ce6a4e437d9ae127b4745645",
+   "sha256_lf": "34b4c242491b200affb8c497d02be2ace3a5e7c4ce6a4e437d9ae127b4745645"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p005_N1000.npz": {
+   "sha256": "c4401057d115dfb716328a576ae9d6213c3064d459d70dc691ca01c52e0c5080",
+   "sha256_lf": "c4401057d115dfb716328a576ae9d6213c3064d459d70dc691ca01c52e0c5080"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p005_N10000.npz": {
+   "sha256": "73b7d6a6d63e3e011a545a337195114ef4bf6332e23a6b25f50ee50dd4463248",
+   "sha256_lf": "73b7d6a6d63e3e011a545a337195114ef4bf6332e23a6b25f50ee50dd4463248"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p005_N2000.npz": {
+   "sha256": "aa0fda028aaecff60c33b3685559be7d573f82b2b3f09837cc76c82f040c551c",
+   "sha256_lf": "aa0fda028aaecff60c33b3685559be7d573f82b2b3f09837cc76c82f040c551c"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/alfa0p005_N500.npz": {
+   "sha256": "100b55f112490f5ac2f1620a5a1e8fc26d5fb40dca65946015439977459d078d",
+   "sha256_lf": "100b55f112490f5ac2f1620a5a1e8fc26d5fb40dca65946015439977459d078d"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0_N1000.npz": {
+   "sha256": "54528ee8659349780a2b578a40abb4b0dd62ec7b81574ee1aa42563e94bc8017",
+   "sha256_lf": "54528ee8659349780a2b578a40abb4b0dd62ec7b81574ee1aa42563e94bc8017"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0_N10000.npz": {
+   "sha256": "6922efedfbcef6db1871371da76152fe01284097f3d28f93a7e4047f937e5f47",
+   "sha256_lf": "6922efedfbcef6db1871371da76152fe01284097f3d28f93a7e4047f937e5f47"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0_N2000.npz": {
+   "sha256": "4f1160c2157f61d3fd9c2f9f650bd562e2c1347e8400047d616cede367a2aa39",
+   "sha256_lf": "4f1160c2157f61d3fd9c2f9f650bd562e2c1347e8400047d616cede367a2aa39"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0_N500.npz": {
+   "sha256": "8d65e9d1ac40f444b554e8178b1e12cfaac325eaa00cceb87970d4bd4638b9d2",
+   "sha256_lf": "8d65e9d1ac40f444b554e8178b1e12cfaac325eaa00cceb87970d4bd4638b9d2"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0_N5000.npz": {
+   "sha256": "57e821b5221901cb52f6e36839d507f1b5d4c3e624a293f35f3d7fc87af5a9bf",
+   "sha256_lf": "57e821b5221901cb52f6e36839d507f1b5d4c3e624a293f35f3d7fc87af5a9bf"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/E0eps0p1_N5000.npz": {
+   "sha256": "b15f8475e42a68e05d247c16cba056b32baf2b1636b043bd3ecf0822fef14420",
+   "sha256_lf": "b15f8475e42a68e05d247c16cba056b32baf2b1636b043bd3ecf0822fef14420"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/F_N1000.npz": {
+   "sha256": "b3d5783ad079f22d4abdaa2f669faadbb458ca94f43ca4dd44e3d5c7ee367438",
+   "sha256_lf": "b3d5783ad079f22d4abdaa2f669faadbb458ca94f43ca4dd44e3d5c7ee367438"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/F_N10000.npz": {
+   "sha256": "4e26b37ce379df9af9d1c74bf78e9e642670e3a4fb25cc96ed9d81250fae0a7a",
+   "sha256_lf": "4e26b37ce379df9af9d1c74bf78e9e642670e3a4fb25cc96ed9d81250fae0a7a"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/F_N2000.npz": {
+   "sha256": "0f2fae6835abc980581dfcd8c694603d5945767264d7ad7923c919bd3292a99d",
+   "sha256_lf": "0f2fae6835abc980581dfcd8c694603d5945767264d7ad7923c919bd3292a99d"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/F_N500.npz": {
+   "sha256": "cfe0fa6cf44597e5059726dce68b0bacfbbe4c3199b03d683d86362822ced882",
+   "sha256_lf": "cfe0fa6cf44597e5059726dce68b0bacfbbe4c3199b03d683d86362822ced882"
+  },
+  "analisis_adicional/fase2_evolucion/artefactos/REP.npz": {
+   "sha256": "0c195a753e35bb2d8ad85f55d2ca4298547d68e4d0c14f8b7fc5c0c1390cab3e",
+   "sha256_lf": "0c195a753e35bb2d8ad85f55d2ca4298547d68e4d0c14f8b7fc5c0c1390cab3e"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig1_inicial_vs_optimizada.png": {
+   "sha256": "491933e6758f7f2838c22461c7fe03cf90825fa7147620199b91b3d2ae69aa30",
+   "sha256_lf": "491933e6758f7f2838c22461c7fe03cf90825fa7147620199b91b3d2ae69aa30"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig2_sensibilidad_alpha.png": {
+   "sha256": "d63300e937929e143dbb4855ffe63bf5da050cc3ced6f84636fb88fd3fddf04b",
+   "sha256_lf": "d63300e937929e143dbb4855ffe63bf5da050cc3ced6f84636fb88fd3fddf04b"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig2b_ruido_Q_y_alpha_por_N.png": {
+   "sha256": "2d7fad067c096ab1647d7f28313c6f1ef55be288df78a1027167dc8ec4bcf31d",
+   "sha256_lf": "2d7fad067c096ab1647d7f28313c6f1ef55be288df78a1027167dc8ec4bcf31d"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig3_numero_de_episodios.png": {
+   "sha256": "925f38e1af34ef03405798f91048cc431bd149e9a576a8cb05a5463095609b6e",
+   "sha256_lf": "925f38e1af34ef03405798f91048cc431bd149e9a576a8cb05a5463095609b6e"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig4_cadena_E0_E3.png": {
+   "sha256": "1f4fd2906b7f5c46ec7232834191f60b17c3146df22036383bfe523beb3d3816",
+   "sha256_lf": "1f4fd2906b7f5c46ec7232834191f60b17c3146df22036383bfe523beb3d3816"
+  },
+  "analisis_adicional/fase2_evolucion/figuras/fig5_politica_reversion.png": {
+   "sha256": "fea83e236452004aeb11eeb4e850882dfeabb79fd2898592e6c721d4ab33c2f8",
+   "sha256_lf": "fea83e236452004aeb11eeb4e850882dfeabb79fd2898592e6c721d4ab33c2f8"
+  },
+  "analisis_adicional/fase2_evolucion/registro_ejecucion.log": {
+   "sha256": "5d9d337f016e653458527bd61509159bb51508e0291e1f4e81abddf3c91ea6c1",
+   "sha256_lf": "c615a65f21d7e3cc5dfc40d1b122be43bad8bcd867df2f622e0a10e4b9752bd6"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque1_e0_n2000.csv": {
+   "sha256": "f3b6bc881cfa4a0df90740ef338874b642bf4c8feb45a706e78506f48678cd66",
+   "sha256_lf": "044f2c08d0ef59daa424f0592a90d1ee3cff7b6fc7cdb7cf3c1da9f2502cb3d9"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque2_alpha_n5000.csv": {
+   "sha256": "17dd58d6381e998b23a8fd2c1867e52f3c3908eca3cfd594730bc2c93ca3c3ab",
+   "sha256_lf": "95f8e01df8bfa35918014712347694c5e114fdaff6378329e8f95c9adf4fb02f"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque2_alpha_x_N.csv": {
+   "sha256": "d15b075a14952b2e28065dc2ae137a955852187c5fa174bd39038815b1a9d941",
+   "sha256_lf": "9b00e0f03ce849d14d3cd54693775b80528a639e60f5bac11de37a8682d032f3"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque2_intervencion_epsilon.csv": {
+   "sha256": "c75e2886462247bb38713037b39252efe33756420dc8f2bf0f53bbee6b967d5f",
+   "sha256_lf": "66d19b5d39e340533e68a6a37db6fde85f31267f1f8e247dd0d8ab82ed0d2c8a"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque2_ruido_Q.csv": {
+   "sha256": "b5f944e9c90e453b8e3d4b3a996034237c71fd48a12df5ed959ebe8a52d74ce2",
+   "sha256_lf": "16f6371875b6ae7a75f44276338327ffa03be0912e5d49fd71cb075a822a680b"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque2_visitas.csv": {
+   "sha256": "2b1253f25eacb2ef1a3d961be32420e0957b3cec01c83e22dd221a0857573735",
+   "sha256_lf": "dde95742d3a3287cf86f3fc1883f74d71a97fafc3256cc5ab92bfa3a23be9c3c"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque3_episodios.csv": {
+   "sha256": "0fabcc8f7c38a26b49738d2d7d69a72f7dfd67d91105e7239f91cce28345c73e",
+   "sha256_lf": "cf85bef4e7867e3d995690bf6fb9643b2e93aef99adbe1474633ad4a0da00790"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque3_n_suficiente.csv": {
+   "sha256": "5014f4e5d9679386f9b12f99f170b4439735c99cfc2529b681602f5f28690152",
+   "sha256_lf": "5eb98552f370213e3244e8de6f25a3363323a3a662011a9f4e3aef7a67111a77"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque4_cadena.csv": {
+   "sha256": "bc949503cb9806676bf1cc58f27a63bbf7253a79b80bf81f48ad3615b9b501cd",
+   "sha256_lf": "4436349e34e55a243c30c52460e3b3670e86691af21e1915a3884c6cb78cfb56"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque4_descomposicion.csv": {
+   "sha256": "b868c93ae71306bacb36820de41149ccf80930ee81b544835329b5b7ebefab5b",
+   "sha256_lf": "b285e61f4a739583f24ce8447c8b7d464222a1c34478c2af058b7927253ed9e5"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque4_e4_discretizacion.csv": {
+   "sha256": "f1df87d3215749f88cd04f0cdcdbf4788123c5d8f34c6a8f0c8192d3b0fbb0bf",
+   "sha256_lf": "1b0ea8fe98e732ba6125483684f1c11508d4850b7ecc7fac0f9137e76b782fb7"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque5_inicial_vs_optimizada.csv": {
+   "sha256": "c589a3a3e79aeb55e98399405ca8a02ad0c66a28f6bd52afec4e1f0fe2d77d59",
+   "sha256_lf": "10a8e868e7181deff4272b9fae3012c1fbfd416bff11514da91328407ca1c752"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque6_qlearning_vs_sarsa.csv": {
+   "sha256": "6367d6a30d97968bb95cbfc17858fef3d3fbfd4523c68a11006ea900df570b54",
+   "sha256_lf": "f4d35a8051b493093e9557e07fbc9147e85b5d7e29b3a074ec0a66c9725fb14f"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/bloque6_vs_buyhold.csv": {
+   "sha256": "8498adf093ceb6eb7b9cd880b0c9bd9ac9059ea1d523734f0b599acdcc6e04d8",
+   "sha256_lf": "fb52470d4746334f6a128f644eefa76aad864f465849c31b108c324405ba3363"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/manifiesto_corridas.csv": {
+   "sha256": "f8aa7bc8571d924552210764d529ab5c26242ef3c57b3e76f1e7a0d3fea69f7e",
+   "sha256_lf": "7f07d8e799e2d7d8d10ed5c977825c1576c3233f0d695215bc99e7f65744f175"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/manifiesto_procedencia.json": {
+   "sha256": "ad342a8ef404116a1aca9cc4464beda99054cca80edfc42a0adbd369ba45510a",
+   "sha256_lf": "8011e7120d57bfda88b10df9f7b1879e098f576ae5232d77c8e4324061ed4729"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/tablas_informe.md": {
+   "sha256": "87fcfc2fdbd72a5f9aa4b1b96a7545727cfb66600181589c65bbc190fb45f65d",
+   "sha256_lf": "d5cfd42aba4e5510c20eb50e565150fcc728544e04217ce00cfaa3b16db512d9"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/verificacion_fase2_ejecucion_28oct.csv": {
+   "sha256": "19b0430281d85743e9fc320968bcc9d3a1c42bff55a6e0d76a5ed7e4ef995fe7",
+   "sha256_lf": "75067866ec9cdb5127173140d6dd71b43987a6aec4f30afa0a56a3f86625eab6"
+  },
+  "analisis_adicional/fase2_evolucion/resultados/verificacion_reproduccion_marco.csv": {
+   "sha256": "97dfe10788a943ed02dcb83b970e87272edda85fe5ac5c00d62ade9452a0c797",
+   "sha256_lf": "c93dde6e62afb35aabe6247b0a629ef6c2fe49e29ed4494bab0d05376eda7925"
+  }
+ },
+ "fase2_codigo": {
+  "analisis_adicional/fase2_evolucion/analisis_fase2.py": {
+   "sha256_fase2": "16a1974d6dbb10171bd41bbbc187f6af7e66368f28a95f022d6778976370dfe7",
+   "sha256": "2c137780da21e31710b3d08b3d9e00f6c83cfee94e588d8d07060e1f3f9abb9f",
+   "sha256_lf": "07e9e27248fbdd45bfb69661a71f8e9f9558a3a487b0b7fa5755eeeab87bdd6a",
+   "cambio_fase4": "sólo docstring (comando genérico)"
+  },
+  "analisis_adicional/fase2_evolucion/ensamblar_informe.py": {
+   "sha256_fase2": "41f9c4eeb5141d40884399bdbc735ab37b6d45646855b4c61d5b056403078849",
+   "sha256": "d55b460d0c0ad0cd7e09d5563c0d31f4c45d526c9c26514b426e4a1f2fef59d6",
+   "sha256_lf": "763c72d8e1d222d57e1ca414398a4db409b1b1e2292bee7e1f9cf058d8bae210",
+   "cambio_fase4": "sólo docstring (comando genérico)"
+  },
+  "analisis_adicional/fase2_evolucion/entrenar.py": {
+   "sha256_fase2": "63da6d92b45e6be993d02930bee69c37ebc2fd0fc3f5810271f9a47e6c681934",
+   "sha256": "e3ceb60485933e407fe9fef68d8617820cfd49d67033663c5265e76a2b49ce9e",
+   "sha256_lf": "964a5997e02fe6c6e174bcc4119e65d8d4948bbdace4d662a93e429d709d8b94",
+   "cambio_fase4": "docstring sin ruta personal; INICIO sólo se registra si hay grupos pendientes (verificar_fase2.py V5 ya no añade líneas al registro)"
+  },
+  "analisis_adicional/fase2_evolucion/estadistica.py": {
+   "sha256_fase2": "13ad56f90e653c4f3410d38bb842e708c728974be4916451472804f898590dc3",
+   "sha256": "13ad56f90e653c4f3410d38bb842e708c728974be4916451472804f898590dc3",
+   "sha256_lf": "13ad56f90e653c4f3410d38bb842e708c728974be4916451472804f898590dc3",
+   "cambio_fase4": "sin cambios"
+  },
+  "analisis_adicional/fase2_evolucion/generar_tablas_informe.py": {
+   "sha256_fase2": "21ec6e6ab4fa190673c32e8ce02fc3801eab26464aea1ccca7909ce1966af60b",
+   "sha256": "24ceaa12660c6fe5a620ebf4824ac3b3f1a803ffde0a1f84819f223fb8e8da1e",
+   "sha256_lf": "1c09dd0b87ebeaefa9b8ec0f14a4807c04208727613c33472c208f9f1eeed79e",
+   "cambio_fase4": "sólo docstring (comando genérico)"
+  },
+  "analisis_adicional/fase2_evolucion/INFORME_FASE2.md": {
+   "sha256_fase2": "137929d5405a071a617a47eabc2c31de34183f3c143efad98cce707c7a17ccf5",
+   "sha256": "c5208ac5977f389bb0ddbff13e6ed15c5da8b81ef8af9ea8995fa90e109962b6",
+   "sha256_lf": "7691aad2ac990457d5049a59688bbcff6817deb3278cb08ea32a35a76a442f61",
+   "cambio_fase4": "idem informe_plantilla.md (mismo texto aplicado al informe ya ensamblado)"
+  },
+  "analisis_adicional/fase2_evolucion/informe_plantilla.md": {
+   "sha256_fase2": "8b260f6ecbb861f813c9c68371cc2e8f9f5db32891a5fe432ed6b48b27de6c54",
+   "sha256": "9e69d54af2beaca39160421edab50fceb51fadceb404fd90b646c89ceb1a86b5",
+   "sha256_lf": "0a3f533921eae193b3995da40ff99366fd3d13b0efeb6d2769b36f090bfe33f4",
+   "cambio_fase4": "aclara que las rutas C:\\Users\\dgall\\... son del entorno del autor y apunta al README"
+  },
+  "analisis_adicional/fase2_evolucion/manifiesto.py": {
+   "sha256_fase2": "9ff2462187f030e81d08c0a23d5df1bb2a64ce88137a92d9c42c8710f09f5d32",
+   "sha256": "718690c5c4ae9ae8d179f20ceb46d07f5a6c0e3c91802c3493eedb63e62094e9",
+   "sha256_lf": "71d8e57b49c48bcfe8010711d48be2ac0049f581d1eab5d427f4139a620b4225",
+   "cambio_fase4": "comprobación por categorías (esta versión); --registrar y --actualizar-adiciones"
+  },
+  "analisis_adicional/fase2_evolucion/manifiesto_huellas_inicio.json": {
+   "sha256_fase2": "22a88df579dd6b8ead730700e51347e3830dfbab76b094221667a0ff1a492daf",
+   "sha256": "22a88df579dd6b8ead730700e51347e3830dfbab76b094221667a0ff1a492daf",
+   "sha256_lf": "55f4d1a878047c2a7a068aefab6426707d7b88b1d24d0657f5e91433fcb23117",
+   "cambio_fase4": "sin cambios"
+  },
+  "analisis_adicional/fase2_evolucion/utilidades.py": {
+   "sha256_fase2": "3d06126827e3dda786918bd06794da55770e1457789d5c3c97a223fe05632689",
+   "sha256": "388d59331f32908ca5b453ce3578973bb6f164bc3e827616c829e869f14f0215",
+   "sha256_lf": "6a7928abcdf2bcb7133ed03ccee78500141dc34c7e6f7a521f00fa5e0e061d3f",
+   "cambio_fase4": "sha256_lf y aclaración del alcance de archivos_protegidos()"
+  },
+  "analisis_adicional/fase2_evolucion/verificar_fase2.py": {
+   "sha256_fase2": "db928a6d9c22e04af0409417103a6890e9ee4bd24ddb7399e5c78c32aec6c2ea",
+   "sha256": "9e5210e26a3de21aaacb16d38706a27c8c49fb61b3436bd35943a9ddb51e5681",
+   "sha256_lf": "c4b4f8851983c170bd83a5807621db04a2e1e4d09638eef74ec280407d62981e",
+   "cambio_fase4": "V4 por categorías con listas declaradas; V5 localiza el intérprete con TALLER_RL_PYTHON o ~/.venvs (Windows y POSIX); V6 admite commits posteriores"
+  }
+ },
+ "adiciones": {
+  "analisis_adicional/AUDITORIA_REPOSITORIO.md": {
+   "categoria": "adiciones_fase3",
+   "motivo": "Fase 3: auditoría del repositorio, riesgos de publicación y comandos propuestos",
+   "sha256": "32527721bb9e7e7dd3ef302a8d0475889716ad0b356e98573f7f25ea925bb22e",
+   "sha256_lf": "248221f2c5f01659e6a6e90cc98c3f870b4187ce39d28f175b4c7cd5c00821a0"
+  },
+  "analisis_adicional/CONTRIBUCIONES_DANI.md": {
+   "categoria": "adiciones_fase3",
+   "motivo": "Fase 3: contribuciones con procedencia (original / reutilizado / reproducido / nuevo)",
+   "sha256": "e31aae9640b20a6e557c247d2cf942aebb738b10529f84edf5ac50be7feb25bd",
+   "sha256_lf": "66330d05a8dc786fa11b9381351af446d1c0a37deeebfccf0ada4084206b2b70"
+  },
+  "analisis_adicional/MATRIZ_EVIDENCIAS.md": {
+   "categoria": "adiciones_fase3",
+   "motivo": "Fase 3: matriz pregunta-hipótesis-experimento-resultado-evidencia",
+   "sha256": "257e0b9354e1c1513ae7847137d2523f73892b45d7c713ce971ea331e3d097e9",
+   "sha256_lf": "257e0b9354e1c1513ae7847137d2523f73892b45d7c713ce971ea331e3d097e9"
+  },
+  "analisis_adicional/PROPUESTA_ENTREGA.md": {
+   "categoria": "adiciones_fase3",
+   "motivo": "Fase 3: contenido propuesto para el PDF de 2 páginas y la defensa",
+   "sha256": "d284618f27f6f56346b3359c8f2a35ec5b544c98f9e4635f0009b266a2ecce99",
+   "sha256_lf": "d284618f27f6f56346b3359c8f2a35ec5b544c98f9e4635f0009b266a2ecce99"
+  },
+  "analisis_adicional/README_REPRODUCCION.md": {
+   "categoria": "adiciones_fase4",
+   "motivo": "Fase 4: entornos, orden de ejecución, verificación sin reentrenar y reentrenamiento opcional",
+   "sha256": "e766d80b3d15188b2b74429e70216749387faff585de2d742c412bd39a58d8a9",
+   "sha256_lf": "e766d80b3d15188b2b74429e70216749387faff585de2d742c412bd39a58d8a9"
+  },
+  "analisis_adicional/requirements_analisis.txt": {
+   "categoria": "adiciones_fase4",
+   "motivo": "Fase 4: dependencias verificadas del análisis (Fases 1-2) y las figuras",
+   "sha256": "401a42e568c5956ec23789ef9c7ad065a48063bac87c430fdaa8f0f41bf334c4",
+   "sha256_lf": "401a42e568c5956ec23789ef9c7ad065a48063bac87c430fdaa8f0f41bf334c4"
+  },
+  "analisis_adicional/requirements_entrenamiento.txt": {
+   "categoria": "adiciones_fase4",
+   "motivo": "Fase 4: dependencias verificadas del entrenamiento (Fase 2)",
+   "sha256": "c80256d6273c311ce8c7109f4744696a93962e4aca8921c1fd9e71e82c003eb9",
+   "sha256_lf": "c80256d6273c311ce8c7109f4744696a93962e4aca8921c1fd9e71e82c003eb9"
+  },
+  "analisis_adicional/RESUMEN_PARA_EQUIPO.md": {
+   "categoria": "adiciones_fase3",
+   "motivo": "Fase 3: resumen para Marco y Cristian con decisiones pendientes",
+   "sha256": "7d4dcc4a9b2dd96ab617305baeedc17d477816a10966c18a277bfeaee4f68106",
+   "sha256_lf": "7d4dcc4a9b2dd96ab617305baeedc17d477816a10966c18a277bfeaee4f68106"
+  }
+ },
+ "regenerados_excluidos": [
+  "analisis_adicional/fase2_evolucion/resultados/verificacion_fase2.csv"
+ ],
+ "autorreferencia_excluida": [
+  "analisis_adicional/fase2_evolucion/manifiesto_integridad.json"
+ ],
+ "historial": [
+  {
+   "fecha": "2026-10-28 21:23",
+   "accion": "registrar",
+   "detalle": "45 artefactos, 11 de código/informes, 8 adiciones"
+  },
+  {
+   "fecha": "2026-10-28 21:23",
+   "accion": "actualizar-adiciones",
+   "detalle": [
+    "analisis_adicional/fase2_evolucion/manifiesto.py"
+   ]
+  },
+  {
+   "fecha": "2026-10-28 21:26",
+   "accion": "actualizar-adiciones",
+   "detalle": [
+    "analisis_adicional/AUDITORIA_REPOSITORIO.md",
+    "analisis_adicional/CONTRIBUCIONES_DANI.md",
+    "analisis_adicional/RESUMEN_PARA_EQUIPO.md"
+   ]
+  }
+ ]
+}

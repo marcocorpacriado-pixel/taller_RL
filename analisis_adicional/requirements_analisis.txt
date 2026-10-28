@@ -1,0 +1,15 @@
+# Entorno de ANÁLISIS (Fase 1, análisis de la Fase 2, tablas, figuras y verificación). No necesita gymnasium.
+# Versiones realmente usadas y verificadas el 28/10/2026: Python 3.14.3 (Windows 11, intérprete del sistema, sin venv).
+# Instalación: python -m pip install -r analisis_adicional/requirements_analisis.txt
+numpy==2.4.2
+matplotlib==3.10.8
+# Dependencias de matplotlib tal como estaban instaladas al verificar (pip las resuelve solo; se fijan para dejar constancia):
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.61.1
+kiwisolver==1.4.9
+packaging==26.0
+pillow==12.1.1
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+six==1.17.0

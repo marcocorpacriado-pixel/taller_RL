@@ -1,0 +1,9 @@
+# Entorno de ENTRENAMIENTO (sólo para repetir los entrenamientos de la Fase 2 con trader_rl.py de Marco). No hace falta para analizar.
+# Versiones realmente usadas el 28/10/2026: Python 3.12.10 (Windows 11), entorno virtual aislado, sin matplotlib.
+# Instalación: python -m pip install -r analisis_adicional/requirements_entrenamiento.txt
+numpy==2.5.4
+gymnasium==1.4.0
+# Dependencias de gymnasium tal como estaban instaladas (pip las resuelve solo; se fijan para dejar constancia):
+cloudpickle==3.1.2
+Farama-Notifications==0.0.6
+typing_extensions==4.16.0
