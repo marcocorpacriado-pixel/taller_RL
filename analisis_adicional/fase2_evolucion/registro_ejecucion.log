@@ -1,0 +1,46 @@
+[2026-10-28 16:28:42] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=['REP']
+[2026-10-28 16:28:42] GRUPO REP inicio: 40 entrenamientos, Réplica instrumentada de Marco alpha-stage α=0.002
+[2026-10-28 16:32:15] REP: 40/40 corridas idénticas a Marco (max|dif|=0.0)
+[2026-10-28 16:32:15] GRUPO REP fin: 3.6 min -> REP.npz
+[2026-10-28 16:32:23] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=['E0_N500', 'E0_N1000', 'E0_N2000', 'E0_N5000', 'E0_N10000', 'F_N500', 'F_N1000', 'F_N2000', 'F_N10000', 'alfa0p002_N500', 'alfa0p002_N1000', 'alfa0p002_N2000', 'alfa0p002_N10000', 'alfa0p005_N500', 'alfa0p005_N1000', 'alfa0p005_N2000', 'alfa0p005_N10000']
+[2026-10-28 16:32:23] GRUPO E0_N10000 inicio: 20 entrenamientos, E0 con N=10000 (sólo reversión y regímenes: recorte de alcance)
+[2026-10-28 16:35:58] HUELLAS de inicio guardadas: 51 archivos protegidos, HEAD=5a6e1ee
+[2026-10-28 16:36:24] GRUPO E0_N10000 fin: 4.0 min -> E0_N10000.npz
+[2026-10-28 16:36:24] GRUPO F_N10000 inicio: 20 entrenamientos, Config final de Marco (E3) con N=10000 (sólo reversión y regímenes)
+[2026-10-28 16:40:26] GRUPO F_N10000 fin: 4.0 min -> F_N10000.npz
+[2026-10-28 16:40:26] GRUPO alfa0p002_N10000 inicio: 20 entrenamientos, alpha=0.002 constante sobre la base de Marco, N=10000
+[2026-10-28 16:44:24] GRUPO alfa0p002_N10000 fin: 4.0 min -> alfa0p002_N10000.npz
+[2026-10-28 16:44:24] GRUPO alfa0p005_N10000 inicio: 20 entrenamientos, alpha=0.005 constante sobre la base de Marco, N=10000
+[2026-10-28 16:48:21] GRUPO alfa0p005_N10000 fin: 4.0 min -> alfa0p005_N10000.npz
+[2026-10-28 16:48:21] GRUPO E0_N5000 inicio: 40 entrenamientos, E0: Config() por defecto (alpha=0.05 constante, gamma=0.95, eps 1->0.01 f=0.6, 10 cuantiles), N=5000
+[2026-10-28 16:51:49] GRUPO E0_N5000 fin: 3.5 min -> E0_N5000.npz
+[2026-10-28 16:51:49] GRUPO E0_N2000 inicio: 40 entrenamientos, E0: Config() por defecto (alpha=0.05 constante, gamma=0.95, eps 1->0.01 f=0.6, 10 cuantiles), N=2000
+[2026-10-28 16:53:16] GRUPO E0_N2000 fin: 1.4 min -> E0_N2000.npz
+[2026-10-28 16:53:16] GRUPO F_N2000 inicio: 40 entrenamientos, Config final de Marco (E3) reentrenada con N=2000
+[2026-10-28 16:54:52] GRUPO F_N2000 fin: 1.6 min -> F_N2000.npz
+[2026-10-28 16:54:52] GRUPO alfa0p002_N2000 inicio: 20 entrenamientos, alpha=0.002 constante sobre la base de Marco, N=2000
+[2026-10-28 16:55:51] GRUPO alfa0p002_N2000 fin: 1.0 min -> alfa0p002_N2000.npz
+[2026-10-28 16:55:51] GRUPO alfa0p005_N2000 inicio: 20 entrenamientos, alpha=0.005 constante sobre la base de Marco, N=2000
+[2026-10-28 16:56:50] GRUPO alfa0p005_N2000 fin: 1.0 min -> alfa0p005_N2000.npz
+[2026-10-28 16:56:50] GRUPO E0_N1000 inicio: 40 entrenamientos, E0: Config() por defecto (alpha=0.05 constante, gamma=0.95, eps 1->0.01 f=0.6, 10 cuantiles), N=1000
+[2026-10-28 16:57:39] GRUPO E0_N1000 fin: 0.8 min -> E0_N1000.npz
+[2026-10-28 16:57:39] GRUPO F_N1000 inicio: 40 entrenamientos, Config final de Marco (E3) reentrenada con N=1000
+[2026-10-28 16:58:29] GRUPO F_N1000 fin: 0.8 min -> F_N1000.npz
+[2026-10-28 16:58:29] GRUPO alfa0p002_N1000 inicio: 20 entrenamientos, alpha=0.002 constante sobre la base de Marco, N=1000
+[2026-10-28 16:59:00] GRUPO alfa0p002_N1000 fin: 0.5 min -> alfa0p002_N1000.npz
+[2026-10-28 16:59:00] GRUPO alfa0p005_N1000 inicio: 20 entrenamientos, alpha=0.005 constante sobre la base de Marco, N=1000
+[2026-10-28 16:59:32] GRUPO alfa0p005_N1000 fin: 0.5 min -> alfa0p005_N1000.npz
+[2026-10-28 16:59:32] GRUPO E0_N500 inicio: 40 entrenamientos, E0: Config() por defecto (alpha=0.05 constante, gamma=0.95, eps 1->0.01 f=0.6, 10 cuantiles), N=500
+[2026-10-28 17:00:00] GRUPO E0_N500 fin: 0.5 min -> E0_N500.npz
+[2026-10-28 17:00:00] GRUPO F_N500 inicio: 40 entrenamientos, Config final de Marco (E3) reentrenada con N=500
+[2026-10-28 17:00:28] GRUPO F_N500 fin: 0.5 min -> F_N500.npz
+[2026-10-28 17:00:28] GRUPO alfa0p002_N500 inicio: 20 entrenamientos, alpha=0.002 constante sobre la base de Marco, N=500
+[2026-10-28 17:00:45] GRUPO alfa0p002_N500 fin: 0.3 min -> alfa0p002_N500.npz
+[2026-10-28 17:00:45] GRUPO alfa0p005_N500 inicio: 20 entrenamientos, alpha=0.005 constante sobre la base de Marco, N=500
+[2026-10-28 17:01:03] GRUPO alfa0p005_N500 fin: 0.3 min -> alfa0p005_N500.npz
+[2026-10-28 17:07:09] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=[]
+[2026-10-28 17:16:41] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=['E0eps0p1_N5000']
+[2026-10-28 17:16:41] GRUPO E0eps0p1_N5000 inicio: 20 entrenamientos, E0 (alpha=0.05) con epsilon constante 0.1, N=5000: intervención sobre el bloqueo (sólo reversión y regímenes)
+[2026-10-28 17:19:02] GRUPO E0eps0p1_N5000 fin: 2.3 min -> E0eps0p1_N5000.npz
+[2026-10-28 17:25:13] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=[]
+[2026-10-28 17:28:30] INICIO python=3.12.10 numpy=2.5.4 gymnasium=1.4.0 plataforma=Windows-11-10.0.26200-SP0 procesos=16 grupos=[]

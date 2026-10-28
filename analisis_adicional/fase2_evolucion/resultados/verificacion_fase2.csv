@@ -1,0 +1,11 @@
+comprobacion,n_elementos,detalle,resultado
+V1 política reconstruida de Q == val/test guardados (artefactos nuevos),540,max|dif|=0; 0 corridas con empates exactos en Q excluidas,OK
+"V2 réplica de 40 corridas de Marco (Q, curvas, recompensas, balances, val, test) idéntica bit a bit",40,40/40 idénticas,OK
+"V3 series de test regeneradas (seed 7777, 100) == baselines.pkl de Marco",400,max|dif|=0,OK
+V4a originales de Marco y archivos de la Fase 1 sin cambios (sha256 frente a la instantánea de inicio),51,"idénticos=51, sólo saltos de línea=0, modificados/ausentes=0",OK
+"V4b artefactos de la Fase 2 (.npz, resultados, figuras, registro) sin cambios",45,"idénticos=45, sólo saltos de línea=0, modificados/ausentes=0",OK
+V4c código e informes de la Fase 2 coinciden con su lista declarada (ediciones de Fase 4 registradas),11,"idénticos=11, sólo saltos de línea=0, modificados/ausentes=0",OK
+V4d documentos y archivos añadidos en las Fases 3-4 coinciden con su lista declarada,8,"idénticos=8, sólo saltos de línea=0, modificados/ausentes=0",OK
+V4e ningún archivo sin declarar ni cachés de bytecode en analisis_adicional/,1,"sin declarar=0 [], cachés=0",OK
+V5 reejecutar entrenar.py sobre un grupo existente no sobrescribe el artefacto ni el registro,1,"intérprete=python.exe; salida: [saltado] REP: ya existe artefacto (no se sobrescribe sin --forzar); npz igual, registro igual",OK
+V6 git: sin rastreados modificados; HEAD de inicio ancestro del actual; nada fuera de analisis_adicional/ cambiado desde entonces,1,"rama=feature/analisis-estadistico-rl, HEAD=5a6e1ee (inicio 5a6e1ee, ancestro=True), rastreados modificados=ninguno, cambiados fuera de analisis_adicional/ desde el inicio=ninguno",OK

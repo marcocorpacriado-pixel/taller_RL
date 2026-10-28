@@ -1,0 +1,9 @@
+generador,algoritmo,configuracion,val_media_pp,val_sd_semillas_pp,val_ops,test_media_pp,semillas_nunca_opera,politicas_distintas,frac_estados_dentro_que_vende,Q_medio_mantener_dentro,Q_medio_vender_dentro,mediana_act_mantener_dentro_total,val_vs_E0_dif,val_vs_E0_ic_series_lo,val_vs_E0_ic_series_hi,val_vs_E0_ic_pob_lo,val_vs_E0_ic_pob_hi
+reversion,qlearning,"E0 (ε 1→0.01, f=0.6)",-1.69925,3.79964,17.616,-2.03019,4,2,1,-0.00311138,-0.000791096,8232.9,,,,,
+reversion,qlearning,E0 con ε=0.1 constante,-8.55564,8.48754,75.092,-8.64459,2,5,0.96,-0.00174324,0.000264166,2250.5,-6.8564,-8.54746,-5.15867,-18.3718,4.65901
+reversion,sarsa,"E0 (ε 1→0.01, f=0.6)",0,0,0,0,5,1,1,-0.00405125,-0.00109778,8136.6,,,,,
+reversion,sarsa,E0 con ε=0.1 constante,-8.71226,8.73049,72.848,-8.10721,2,5,0.9,-0.00450413,-0.00252348,2418.6,-8.71226,-10.1814,-7.25676,-19.4981,2.07357
+regimenes,qlearning,"E0 (ε 1→0.01, f=0.6)",-1.57238,3.51594,16.204,-1.40487,4,3,0.98,-0.00335236,-0.000891549,7753.6,,,,,
+regimenes,qlearning,E0 con ε=0.1 constante,-3.4222,4.71999,30.18,-3.2118,3,5,0.9,-0.00220966,-0.000416651,1927.5,-1.84982,-2.51116,-1.16775,-9.05798,5.35834
+regimenes,sarsa,"E0 (ε 1→0.01, f=0.6)",0,0,0,0,5,1,1,-0.00421058,-0.00121155,7868.4,,,,,
+regimenes,sarsa,E0 con ε=0.1 constante,-3.67397,5.11703,31.364,-3.47106,3,4,0.96,-0.00569522,-0.00337438,2183.4,-3.67397,-4.49886,-2.8366,-10.0233,2.67533

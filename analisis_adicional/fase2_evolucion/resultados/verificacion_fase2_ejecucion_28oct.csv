@@ -1,0 +1,7 @@
+comprobacion,n_elementos,detalle,resultado
+V1 política reconstruida de Q == val/test guardados (artefactos nuevos),540,max|dif|=0; 0 corridas con empates exactos en Q excluidas,OK
+"V2 réplica de 40 corridas de Marco (Q, curvas, recompensas, balances, val, test) idéntica bit a bit",40,40/40 idénticas,OK
+"V3 series de test regeneradas (seed 7777, 100) == baselines.pkl de Marco",400,max|dif|=0,OK
+V4 archivos protegidos sin cambios (sha256 frente a la instantánea de inicio),51,"modificados=0, añadidos=0",OK
+V5 reejecutar entrenar.py sobre un grupo existente no sobrescribe el artefacto,1,salida: [saltado] REP: ya existe artefacto (no se sobrescribe sin --forzar),OK
+V6 git: sin archivos rastreados modificados; rama y HEAD,1,"rama=feature/analisis-estadistico-rl, HEAD=5a6e1ee (inicio 5a6e1ee), rastreados modificados=ninguno",OK

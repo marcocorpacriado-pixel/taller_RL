@@ -1,0 +1,17 @@
+config,generador,algoritmo,N_referencia,N_suficiente_C1_val_no_peor_que_Nref,N_suficiente_C2_politica_acuerdo_con_Nref_>=0.9,N_suficiente_C3_politica_estable_al_alargar_>=0.9,N_suficiente_C4_semillas_coherentes_>=0.9,N_suficiente_TODOS
+E0,ciclico,qlearning,5000,5000,5000,5000,>5000,>5000
+E0,ciclico,sarsa,5000,2000,5000,5000,>5000,>5000
+E0,browniano,qlearning,5000,5000,500,500,500,5000
+E0,browniano,sarsa,5000,5000,500,500,500,5000
+E0,reversion,qlearning,10000,10000,500,500,500,10000
+E0,reversion,sarsa,10000,500,500,500,500,500
+E0,regimenes,qlearning,10000,10000,500,500,500,10000
+E0,regimenes,sarsa,10000,500,500,500,500,500
+F,ciclico,qlearning,5000,1000,500,2000,500,2000
+F,ciclico,sarsa,5000,5000,500,500,500,5000
+F,browniano,qlearning,5000,500,1000,5000,>5000,>5000
+F,browniano,sarsa,5000,500,500,5000,>5000,>5000
+F,reversion,qlearning,10000,5000,1000,1000,1000,5000
+F,reversion,sarsa,10000,5000,500,500,5000,5000
+F,regimenes,qlearning,10000,5000,500,2000,10000,10000
+F,regimenes,sarsa,10000,5000,500,10000,>10000,>10000

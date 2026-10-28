@@ -1,0 +1,9 @@
+generador,algoritmo,configuracion,val_media_pp,val_sd_semillas_pp,val_ops,test_media_pp,test_ic_series_lo,test_ic_series_hi,test_ic_pob_lo,test_ic_pob_hi,test_ops,semillas_nunca_opera,politicas_distintas,acuerdo_entre_semillas,tiempo_medio_s,ref_E3_val_media_pp,ref_E3_test_media_pp
+ciclico,qlearning,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,429.221,129.245,118.144,396.096,373.457,418.795,231.245,560.946,117.376,0,5,0.73,31.1726,635.187,610.358
+ciclico,sarsa,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,513.099,73.6781,85.24,487.494,461.828,513.48,388.828,586.161,85.744,0,5,0.79,29.7818,636.637,611.481
+browniano,qlearning,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,-1.79493,4.01359,17.068,-1.7018,-2.23491,-1.17211,-6.42677,3.02316,17.39,4,2,0.98,30.3108,0.324018,-2.38459
+browniano,sarsa,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,-1.79493,4.01359,17.068,-1.7018,-2.23532,-1.17651,-6.42677,3.02316,17.39,4,2,0.98,29.8279,0.405694,-0.938632
+reversion,qlearning,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,0,0,0,0,0,0,0,0,0,5,1,1,32.8974,22.309,21.6363
+reversion,sarsa,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,0,0,0,0,0,0,0,0,0,5,1,1,30.7456,22.4147,21.4205
+regimenes,qlearning,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,0,0,0,0,0,0,0,0,0,5,1,1,26.6611,8.51321,0.833979
+regimenes,sarsa,α=0.05 γ=0.95 ε=1→0.01 f=0.6 N=2000 bins=10/cuantiles,0,0,0,0,0,0,0,0,0,5,1,1,19.4996,6.9094,2.56024

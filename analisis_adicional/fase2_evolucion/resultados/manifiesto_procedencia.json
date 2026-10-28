@@ -1,0 +1,39 @@
+{
+ "evaluacion": {
+  "val": "50 series, seed 2024",
+  "test": "100 series, seed 7777",
+  "n_steps": 500,
+  "curva_validacion": "10 primeras series de validación cada 100 episodios",
+  "semillas_entrenamiento": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "corridas_marco": 600,
+ "corridas_fase2": 540,
+ "grupos_fase2": {
+  "E0_N1000": 40,
+  "E0_N10000": 20,
+  "E0_N2000": 40,
+  "E0_N500": 40,
+  "E0_N5000": 40,
+  "E0eps0p1_N5000": 20,
+  "F_N1000": 40,
+  "F_N10000": 20,
+  "F_N2000": 40,
+  "F_N500": 40,
+  "REP": 40,
+  "alfa0p002_N1000": 20,
+  "alfa0p002_N10000": 20,
+  "alfa0p002_N2000": 20,
+  "alfa0p002_N500": 20,
+  "alfa0p005_N1000": 20,
+  "alfa0p005_N10000": 20,
+  "alfa0p005_N2000": 20,
+  "alfa0p005_N500": 20
+ },
+ "nota": "Las corridas de Fase 2 se ejecutaron el 2026-10-28 con el código original de trader_rl.py en un venv aislado; NO son histórico. El grupo REP duplica a propósito 40 corridas de Marco para verificar la reproducción bit a bit."
+}
